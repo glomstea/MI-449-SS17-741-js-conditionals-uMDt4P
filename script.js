@@ -3,14 +3,14 @@ startButton.addEventListener('click', startFunction)
 
 function startFunction () {
   var start = confirm('Are you sure you are brave enough?')
-  if (start === true) {
+  if (start) {
     firstFunction()
   }
 }
 
 function firstFunction () {
   var firstChoice = window.prompt('You stumble upon youre first obstacle where you must find the misspelled word in this sentence and spell it correctly.')
-  if (firstChoice === null) {
+  if (!firstChoice) {
     window.alert('Backing out? Feel free to try again by clicking on the button.')
   } else {
     firstChoice = firstChoice.trim().toLowerCase()
@@ -26,7 +26,7 @@ function firstFunction () {
 
 function secondFunction () {
   var secondChoice = window.prompt('Your second obstacle. How do I shorten the word "okay"?')
-  if (secondChoice === null) {
+  if (!secondChoice) {
     window.alert('Backing out? Feel free to try again by clicking on the button.')
   } else {
     secondChoice = secondChoice.trim().toLowerCase()
@@ -43,7 +43,7 @@ function secondFunction () {
 function thirdFunction () {
   var randomNumber = Math.random()
   var thirdChoice = window.prompt('The third test. How do you correctly abbreviate the word "missus" or the word "miss"? Either answer will work.')
-  if (thirdChoice === null) {
+  if (!thirdChoice) {
     window.alert('Backing out? Feel free to try again by clicking on the button.')
   } else {
     thirdChoice = thirdChoice.trim().toLowerCase()
@@ -67,7 +67,7 @@ function thirdFunction () {
 
 function fourthFunction () {
   var fourthChoice = window.prompt('Youre last obsticle. If you can count the right number of erors in this sentense, you may leave.')
-  if (fourthChoice === null) {
+  if (!fourthChoice) {
     window.alert('Backing out? Feel free to try again by clicking on the button.')
   } else {
     fourthChoice = fourthChoice.trim()
